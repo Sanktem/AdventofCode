@@ -27,30 +27,19 @@ def  PartTwo ():
             move = [*map(int, box.replace('move ', '').replace(' from ', ',').replace(' to ', ',').split(','))]
             move[1] -= 1
             move[2] -= 1
-            ini_move = move[0]
             moving = []
             stack_height = len(stacks[move[1]])
-            #move[0] -= len(stacks[move[1]])
             if move[0] >= stack_height:
                 move[0] = stack_height
             else:
                 pass
-            #print('move0', move[0], 'stack height', stack_height)
-            #place = stacks[move[1]][move[0]*-1]
-            i = 0
-            while i < move[0]:
+            for i in range(0, move[0]):
                 place = stacks[move[1]][move[0]*-1]
-                #print(move[0])
                 moving.append(place)
                 move[0] -= 1
-                i += 1
             for item in moving:
-                stacks[move[1]].pop()
+                stacks[move[1]] = stacks[move[1]][:-1]
                 stacks[move[2]].append(item)
-            print(moving)
-
-
-
 
     final = [stacks[0][-1], stacks[1][-1], stacks[2][-1], stacks[3][-1], stacks[4][-1], stacks[5][-1], stacks[6][-1], stacks[7][-1], stacks[8][-1]]
     return ''.join(final)
