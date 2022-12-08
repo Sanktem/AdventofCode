@@ -27,7 +27,7 @@ def PartOne():
     return p1
 
 def PartTwo():
-    p2 = 0
+    p2 = inf
     cwd = ''
     dir_sizes = defaultdict(int)
     with open('./data.txt', 'r') as f:
