@@ -10,8 +10,8 @@ class File:
 
 
 class Directory:
-    subdiretories: []
-    files: [File]
+    # subdiretories: []
+    # files: [File]
 
     def __init__(self, name: str, parent):
         self.name = name
