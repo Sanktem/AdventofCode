@@ -4,6 +4,8 @@
 
 def PartOne():
    safe_reports = 0
+   i = 0
+   safe_count = 0
    with open('./data.txt', 'r') as f:
       for line in f:
          report = line.strip().split(' ')
@@ -15,10 +17,10 @@ def PartOne():
          increase_two = 2
          increase_three = 3
 
-         for idx in range(len(current_report) - 1 ):
-            if (current_report[idx + 1] != current_report[idx] + increase_one) or (current_report[idx + 1] != current_report[idx] + increase_two) or (current_report[idx + 1] != current_report[idx] + increase_three):
-               safe_reports += 1
-
+         while i < len(current_report):
+            
+            
+        
     
    return safe_reports
         
